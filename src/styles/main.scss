@@ -1,0 +1,15 @@
+@import 'home';
+@import 'articleSingle';
+@import 'header';
+@import 'createArticle';
+
+a{
+  text-decoration: none;
+  color: #fff;
+  background-color: #0f0f0f;
+  padding: 5px 10px;
+}
+main{
+  width: 100%;
+  max-width: 100%;
+}

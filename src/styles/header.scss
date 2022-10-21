@@ -1,0 +1,42 @@
+header{
+  .categoriesHeader{
+    z-index: 1;
+    background-color: #0f0f0f;
+    color: white;
+    padding: 5px 10px;
+    position: relative;
+
+    >a{
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+
+    ul{
+      position: absolute;
+      top: 100%;
+      left: 0;
+      list-style: none;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: #0f0f0f;
+      margin: 0;
+      padding: 14px 5px 5px 5px;
+      display: none;
+
+      li{
+        cursor: pointer;
+        padding: 5px 10px;
+        margin: 0;
+        border: 0;
+
+        a{color: white;}
+        &:hover, &:hover a{
+          background-color: #2a2a2a;
+        }
+      }
+    }
+    &:hover ul{
+      display: flex!important;
+    }
+  }
+}

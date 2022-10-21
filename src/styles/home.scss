@@ -1,0 +1,66 @@
+.home, .categories, .categorySingle{
+  width: 100%;
+  max-width: 96vw;
+  padding: 0 20px;
+
+  .createArticle{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .articlesContainer, .categoriesContainer{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 2%;
+    
+    >div{
+      width: 32%;
+      border-radius: 5px;
+      background-color: #0f0f0f;
+      transition: all 0.3s ease-in-out;
+      position: relative;
+      display: flex;
+
+      a{
+        width: 100%;
+        padding: 20px;
+        color: white;
+      }
+      &:hover{
+        transform: scale(1.05);
+      }
+    }
+    .delArticle{
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 5px 10px;
+      background-color: #ff0000;
+      color: white;
+      border-radius: 0 0 0 5px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      &:hover{
+        background-color: #ff3333;
+      }
+    }
+    .editArticle{
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 5px 10px;
+      background-color: #3c318b;
+      color: white;
+      border-radius: 0 0 0 5px;
+      width: fit-content;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      &:hover{
+        background-color: #2a1f7e;
+      }
+    }
+  }
+}
