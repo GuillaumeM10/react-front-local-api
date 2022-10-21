@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from "react-router-dom"
 import Header from '../components/Header'
 
 const EditArticle = () => {
@@ -9,6 +10,7 @@ const EditArticle = () => {
   const [ autor, setAutor ] = useState('');
   const [ date, setDate ] = useState('');
   const [ categoryId, setCategoryId ] = useState(0);
+  const navigate = useNavigate();
   
   useEffect(() => {
     (async () => { // je récupère la liste des catégories
@@ -46,7 +48,8 @@ const EditArticle = () => {
       })
     });
     // je redirige vers la page de l'article modifié
-    window.location.href = '/article?id=' + window.location.search.split('=')[1];
+    // window.location.href = '/article?id=' + window.location.search.split('=')[1];
+    navigate('/article?id=' + window.location.search.split('=')[1]);
   } 
 
   return (

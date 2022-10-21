@@ -11,6 +11,7 @@ import Categories from './pages/Categories';
 import Category from './pages/Category';
 import CreateArticle from './pages/CreateArticle';
 import EditArticle from './pages/EditArticle';
+import Results from './pages/Results';
 
 function App() {
 
@@ -19,16 +20,16 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route exact path='/' element={<Home/>} />
-          {/* <Route exact path='/recherche' element={<Search/>} /> */}
           <Route exact path='/article' element={<Article/>} />
           <Route exact path='/categories' element={<Categories/>} />
           <Route exact path='/categories/:id' element={<Category/>} />
           <Route exact path='/createArticle' element={<CreateArticle/>} />
           <Route exact path='/editArticle' element={<EditArticle/>} />
+          <Route exact path='/results' element={<Results/>} />
           <Route exact path='/about' element={<About/>} />
           <Route path="*" element={<NotFound/>}/>
         </Routes>
-      </BrowserRouter> 
+      </BrowserRouter>
     </>
   );
 }

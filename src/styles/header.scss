@@ -1,4 +1,36 @@
 header{
+  .research{
+    background-color: #f5f5f5;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    justify-content: space-between;
+
+    input{
+      font-size: 20px;
+      font-weight: 600;
+      border: none;
+      outline: none;
+      padding: 10px;
+      border-radius: 5px 0px 0px 5px;
+      width: 60%;
+      background-color: #f5f5f5;
+    }
+    button{
+      font-size: 14px;
+      color: #666;
+      background-color: #f5f5f5;
+      border: 1px solid #f5f5f5;
+      border-left: 1px solid #2b2626;
+      border-radius: 0px 5px 5px 0px;
+      padding: 5px 10px;
+      width: fit-content;
+      cursor: pointer;
+    }
+  }
+
   .categoriesHeader{
     z-index: 1;
     background-color: #0f0f0f;

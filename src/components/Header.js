@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const Header = () => {
     const [ categories, setCategories ] = useState([]);
+    const [ searchValue, setSearchValue ] = useState("");
 
     useEffect(() => {
         (async () => { // article single
@@ -11,6 +12,15 @@ const Header = () => {
         setCategories(data);
         })()
     }, []);
+
+    const rechercher = () => {
+        window.location.href = "/results?s=" + searchValue
+        console.log(searchValue);
+    }
+    const rechercherDynamique = (e) => {
+        setSearchValue(e.target.value);
+        console.log(e.target.value);
+    }
 
     return (
         <header className="navigation">
@@ -36,6 +46,10 @@ const Header = () => {
                 <NavLink to="/about" >
                     À Propos
                 </NavLink>
+                <div className="research">
+                    <input type="text" placeholder="Rechercher" onInput={(e) => rechercherDynamique(e)}/>
+                    <button onClick={() => rechercher()}>Rechercher</button>
+                </div>
             </div>
         </header>
     );
